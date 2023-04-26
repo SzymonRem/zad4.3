@@ -32,8 +32,10 @@ class Main {
               int wiek= scan.nextInt();
                  System.out.println("Podaj nazwisko");
                String nazwisko =scan.next();
+              System.out.println("Podaj adres");
+               String adres =scan.next();
               
-                s.addStudent(new Student(imie,wiek,nazwisko));
+                s.addStudent(new Student(imie,wiek,nazwisko,adres));
               break;
             }
           case 0:
