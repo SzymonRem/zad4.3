@@ -9,6 +9,7 @@ Kod bazowy programu Commit4_0:
 
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.List;
 
 class Main {
   public static void main(String[] args) {
@@ -53,18 +54,21 @@ class Main {
       }
             }
           case 3:
-            {
-              scan.nextLine();
-              System.out.println("Podaj imie");
-              String imie =scan.nextLine();
-              var szukane = (new Service()).findStudentByName(imie);
-              if(szukane==null)
-                System.out.println("Nie znaleziono");
-              else
-                System.out.println("Znaleziono");
-               System.out.println(szukane.ToString());
-              
-            }
+  {
+    scan.nextLine();
+    System.out.println("Podaj imie");
+    String imie =scan.nextLine();
+    var szukane = s.findStudentsByName(imie);
+    if(szukane.size() == 0)
+      System.out.println("Nie znaleziono");
+    else {
+      System.out.println("Znaleziono:");
+      for(Student found : szukane) {
+        System.out.println(found.ToString());
+      }
+    }
+    break;
+  }
             
         }
       
